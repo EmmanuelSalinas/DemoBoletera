@@ -38,8 +38,8 @@
 </template>
 <script lang="ts" setup>
   
-    import IconAt from '@/assets/icon/social-networks/at.svg'
-    import IconTechSupport from '@/assets/icon/social-networks/techSupport.svg'
+   /*  import IconAt from '@/assets/icon/social-networks/at.svg'
+    import IconTechSupport from '@/assets/icon/social-networks/techSupport.svg' */
 
     /* const store = useStore() */
 
