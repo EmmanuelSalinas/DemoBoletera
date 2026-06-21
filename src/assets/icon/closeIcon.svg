@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.9.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	y="0px" viewBox="0 0 1200 1200" style="enable-background:new 0 0 1200 1200;" xml:space="preserve">
+	<style type="text/css">
+		.st0 {
+			fill: #FFFFFF;
+		}
+	</style>
+	<g id="Grupo_459" transform="translate(-380.25 -518.04)">
+		<g transform="matrix(1, 0, 0, 1, 380.25, 518.04)">
+			<circle id="Elipse_22-2" class="st0" cx="600" cy="600" r="592" />
+		</g>
+		<path id="Icon_awesome-check-circle" d="M1462,1111c0,272.2-220.7,492.9-492.9,492.9S476.2,1383.3,476.2,1111
+		c0-272.2,220.7-492.9,492.9-492.9l0,0C1241.3,618.1,1462,838.8,1462,1111z" style="fill: #E63946" />
+	</g>
+	<path id="Icon_material-cancel" class="st0" d="M829,764.4L764.4,829L600,664.6L435.6,829L371,764.4L535.5,600L371,435.6l64.5-64.5
+	L600,535.5L764.4,371l64.5,64.5L664.6,600L829,764.4z" />
+</svg>

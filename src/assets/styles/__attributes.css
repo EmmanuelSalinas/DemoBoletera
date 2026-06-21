@@ -1,0 +1,75 @@
+  [clickable]:not(:disabled):active {
+    transform: scale(0.98);
+  }
+  [cursor-pointer]{
+    cursor: pointer !important;
+  }
+  [flex-row],
+  [flex-column],
+  [flex-row-reverse],
+  [flex-column-reverse] {
+    display: flex;
+  }
+  [flex-row] {
+    flex-direction: row;
+  }
+  [flex-row-reverse] {
+    flex-direction: row-reverse;
+  }
+  [flex-column]{
+    flex-direction: column;
+  }
+  [flex-column-reverse]{
+    flex-direction: column-reverse;
+  }
+  [justify-center]{
+    justify-content: center;
+  }
+  [justify-space-between]{
+    justify-content: space-between;
+  }
+  [justify-space-evenly]{
+    justify-content: space-evenly;
+  }
+  [justify-space-arround]{
+    justify-content: space-around;
+  }
+ 
+  [justify-end]{
+    justify-content: end;
+  }
+  [align-center]{
+    align-items: center;
+  }
+  [align-end]{
+    align-items: end;
+  }
+  [align-start]{
+    align-items: start;
+  }
+
+  [grow-1]{
+    flex-grow: 1;
+  }
+  [wrap]{
+    flex-wrap: wrap;
+  }
+  [basis-100]{
+    flex-basis: 100%;
+  }
+
+  [text-center]{
+    text-align: center;
+  }
+  [text-end]{
+    text-align: end;
+  }
+  [w-100]{
+    width: 100%;
+  }
+
+  [cursor-pointer]{
+    cursor: pointer;
+  }
+
+  

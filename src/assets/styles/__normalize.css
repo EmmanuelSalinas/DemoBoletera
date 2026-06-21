@@ -1,0 +1,113 @@
+
+/* -------------------------------------------------------------------------
+    Quitamos todos los margin y padding que vienen por defecto,
+    Dejamos la fuente por defecto a todo el documento
+    La propiedad [user-select: none] evita que el usuario seleccione
+  texto dentro de la aplicación
+------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-block: 0;
+  padding-inline: 0;
+  /* user-select: none; */
+  font: inherit;
+  font-size: 14px;
+  font-weight: 400;
+}
+/* html { color-scheme: dark light; } */
+a { display: inline ;}
+/* -------------------------------------------------------------------------
+    Nos aseguramos que todos los elementos multimedia se muestren de
+  manera correcta.
+    Con la propiedad [max-width] al 100% nos aseguramos que los
+  elementos multimedia siempre tomen el ancho completo de su contenedor.
+    La propiedad [display: block], nos aseguramos que los elementos
+  tengan un buen comportamiento dentro de cualquier sección de la página.
+------------------------------------------------------------------------- */
+img,
+svg,
+label,
+video,
+picture {
+  display: block;
+  max-width: 100%;
+}
+/* -------------------------------------------------------------------------
+------------------------------------------------------------------------- */
+label {
+  width: fit-content;
+}
+span {
+  display: inline-block;
+}
+/* -------------------------------------------------------------------------
+    Quitamos el estilo por defecto a todas las listas
+------------------------------------------------------------------------- */
+ul,
+ol,
+dl {
+  list-style: none;
+}
+
+/* -------------------------------------------------------------------------
+    Se el quita el margen a todas las figuras
+------------------------------------------------------------------------- */
+figure {
+  margin-block: 0;
+  margin-inline: 0;
+}
+/* -------------------------------------------------------------------------
+------------------------------------------------------------------------- */
+textarea {
+  width: 100%;
+  resize: vertical;
+}
+/* -------------------------------------------------------------------------
+------------------------------------------------------------------------- */
+:disabled {
+  cursor: not-allowed;
+}
+
+/* Normalizacion de SweetAlert */
+
+.swal2-cancel{
+  background: none !important; 
+  border: 0.125rem solid red!important;
+  color: var(--color-error) !important
+}
+.swal2-actions{
+  width: 100% !important;
+  margin: 0 !important;
+  padding-inline: 1.5rem !important;
+  padding-block: 1rem !important;
+}
+.swal2-actions button{
+  flex-grow: 1 !important;
+}
+
+
+/* -------------------------------------------------------------------------
+    Quitamos los botones interiores y exteriores a aquellos elementos
+  que los contengan, comunmente los [input] de tipo [number]
+------------------------------------------------------------------------- */
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  display: none;
+}
+/* -------------------------------------------------------------------------
+---------------------SCROLL STYLES---------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 0.75rem;
+  height: 0.75rem;
+  background: rgb(105 105 105 / 0.125);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
+  background: rgb(105 105 105 / 0.25);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(105 105 105 / 0.50);
+}

@@ -1,0 +1,121 @@
+:root {
+
+    /* =========================================================
+       PRIMARY (Mint Sage)
+       Color principal elegante y moderno
+    ========================================================= */
+    --color-primary-lightest: #EAF6F2;
+    --color-primary-light:    #CFE7E0;
+    --color-primary:          #95D0BE;
+    --color-primary-dark:     #6FAE9C;
+    --color-primary-darkest:  #4E7E71;
+
+    /* =========================================================
+       SECONDARY (Soft Ice)
+       Azul grisáceo muy suave para layouts
+    ========================================================= */
+    --color-secondary-lightest: #F4FAFA;
+    --color-secondary-light:    #DCEBEB;
+    --color-secondary:          #C3D8D8;
+    --color-secondary-dark:     #9FB7B7;
+    --color-secondary-darkest:  #708787;
+
+    /* =========================================================
+       ACCENT (Dark Graphite)
+       Para contraste, headers y elementos premium
+    ========================================================= */
+    --color-accent-lightest: #D8DDDB;
+    --color-accent-light:    #98A39F;
+    --color-accent:          #3B413F;
+    --color-accent-dark:     #2A2F2D;
+    --color-accent-darkest:  #181B1A;
+
+    /* =========================================================
+       INFO (Cool Mint Blue)
+       Estados informativos suaves
+    ========================================================= */
+    --color-info-lightest: #EDF8F8;
+    --color-info-light:    #CBE8E8;
+    --color-info:          #9FD3D2;
+    --color-info-dark:     #6DA9A8;
+    --color-info-darkest:  #477777;
+
+    /* =========================================================
+       SUCCESS (Fresh Emerald)
+       Verde más vivo pero armónico
+    ========================================================= */
+    --color-success-lightest: #EAFBF4;
+    --color-success-light:    #BCEFD8;
+    --color-success:          #3FC98A;
+    --color-success-dark:     #2D9365;
+    --color-success-darkest:  #1D5C41;
+
+    /* =========================================================
+       WARNING (Soft Amber)
+       Amarillo cálido elegante
+    ========================================================= */
+    --color-warning-lightest: #FFF8E9;
+    --color-warning-light:    #FFE8B0;
+    --color-warning:          #FFC857;
+    --color-warning-dark:     #D89C27;
+    --color-warning-darkest:  #8A6115;
+
+    /* =========================================================
+       ERROR (Muted Coral)
+       Rojo elegante no agresivo
+    ========================================================= */
+    --color-error-lightest: #FFF0F1;
+    --color-error-light:    #FFC7CC;
+    --color-error:          #F26D7D;
+    --color-error-dark:     #C94C5D;
+    --color-error-darkest:  #7A2B35;
+
+    /* =========================================================
+       NEUTRALS
+       Escala gris moderna tipo SaaS
+    ========================================================= */
+    --color-neutral-white:       #FFFFFF;
+    --color-neutral-50:          #F9FBFB;
+    --color-neutral-100:         #F1F5F5;
+    --color-neutral-200:         #E3EBEA;
+    --color-neutral-300:         #CBD7D5;
+    --color-neutral-400:         #A9B7B4;
+    --color-neutral-500:         #7C8A87;
+    --color-neutral-600:         #5D6966;
+    --color-neutral-700:         #414947;
+    --color-neutral-800:         #2B302F;
+    --color-neutral-900:         #181B1A;
+
+    /* =========================================================
+       BACKGROUNDS
+       Fondos suaves y respirables
+    ========================================================= */
+    --color-background-lightest: #FFFFFF;
+    --color-background-light:    #F8FBFB;
+    --color-background:          #EEF5F4;
+    --color-background-dark:     #DDE9E7;
+    --color-background-darkest:  #C5D7D3;
+
+    /* =========================================================
+       TEXT
+    ========================================================= */
+    --color-text-title:    #2A2F2D;
+    --color-text-default:  #4B5653;
+    --color-text-muted:    #7E908C;
+    --color-text-inverse:  #FFFFFF;
+
+    /* =========================================================
+       BORDERS
+    ========================================================= */
+    --color-border-light:  #E3EBEA;
+    --color-border:        #CBD7D5;
+    --color-border-dark:   #AAB8B5;
+
+    /* =========================================================
+       SHADOWS
+    ========================================================= */
+    --shadow-soft: 0 4px 20px rgba(149, 208, 190, 0.10);
+    --shadow-medium: 0 8px 30px rgba(59, 65, 63, 0.10);
+    --shadow-hard: 0 12px 40px rgba(59, 65, 63, 0.16);
+
+}
