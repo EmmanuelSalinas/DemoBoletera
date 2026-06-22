@@ -63,3 +63,23 @@ export default Object({
     },
 })
  */
+
+export default Object({
+    get: async function (endpoint: string, payload: any) {
+        const params = new URLSearchParams(payload)
+
+        const response = {}
+        return response
+    },
+    put: async function (endpoint: string, payload: any) {
+        return {}
+    },
+    post: async function (endpoint: string, payload: any) {
+        const response: any = {}
+
+        return response
+    },
+    delete: async function (endpoint: string, value: any) {
+        return {}
+    },
+})

@@ -688,7 +688,7 @@ export default {
 
 	.search-event__input {
 		align-self: center;
-		width: 70% !;
+		width: 70% !important;
 	}
 
 	.event__cardsWrapper {
