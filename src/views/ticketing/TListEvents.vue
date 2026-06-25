@@ -39,11 +39,11 @@ export default {
 			infoView: {
 				showDetailModel: true,
 				name: 'Mi boletera TAQUILLA',
-				coverImage: '/assets/images/imgDefault.png',
-				profileImage: '/assets/images/logo_esc.png',
+				coverImage: '/images/imgDefault.png',
+				profileImage: '/images/logo_esc.png',
 				backgroundSite: {
 					isImage: false,
-					url: '/assets/image/dev/tenans/libertadores-bg.jpg',
+					url: '/image/dev/tenans/libertadores-bg.jpg',
 					bgColor: '#f9f5e6'
 				},
 				description: '<h2>⚫ 🔵 ⚫ 🐓 <strong>¡El orgullo albiazul late más fuerte que nunca!</strong> 🐓 ⚫ 🔵 ⚫</h2><p><br></p><p class="ql-align-justify">Desde hace más de <strong>75 años</strong>, los <strong>Gallos Blancos de Querétaro</strong> han sido emblema de pasión, historia y resistencia en la liga MX. Fundados el 8 de julio de 1950, han librado caminos desde la Segunda División hasta convertirse en protagonistas de finales y campeonatos nacionales .</p><p class="ql-align-justify">Hoy, el Estadio Corregidora —también llamado el Coloso del Cimatario— vibra con <strong>35,500 aficionados</strong> listos para romper las tribunas en cada partido. Este recinto, que vio partir la Copa Mundial de 1986, es el escenario perfecto para vivir el fútbol con todo el poder del azul, blanco y negro.</p><p class="ql-align-justify">En su vitrina, los Gallos presumen la <strong>Copa MX (Apertura 2016)</strong> y la <strong>Supercopa MX (2016‑17)</strong>, además de finales históricas y preseas en Liga de Ascenso. Y si hablamos de grandes leyendas, no se puede olvidar al brasileño <strong>Ronaldinho</strong>, que en 2014 encendió La Corregidora con su magia y encendió el orgullo queretano.</p><p><br></p><p><br></p><p><br></p><h2>⚡ <strong>Activa tu corazón gallo… ¡Reserva ya tu boleto!</strong></h2><p><br></p><p class="ql-align-justify">Visita “Compra aquí tus boletos” y asegúrate un lugar en uno de los eventos más electrizantes del Bajío. No solo verás un partido: lo <strong>sentirás</strong>, lo <strong>gritarás</strong>, lo <strong>vivirás</strong>… y serás parte del grito: <strong>¡Gallo, Gallo, Gallo!</strong></p>',
@@ -168,8 +168,8 @@ export default {
 						nameFunction: 'Evento 1',
 						dateFunction: '2024-07-15',
 						hourFunction: '20:00',
-						flyer: '/assets/images/events/lasCatrinas.jpg',
-						flyerMini: '/assets/images/imgDefault.png',
+						flyer: '/images/events/lasCatrinas.jpg',
+						flyerMini: '/images/imgDefault.png',
 						theaterAddress: 'Auditorio Josefa Ortiz de Dominguez',
 						classification: 'Familiar',
 					},
@@ -178,8 +178,8 @@ export default {
 						nameFunction: 'Evento 2',
 						dateFunction: '2024-07-17',
 						hourFunction: '20:00',
-						flyer: '/assets/images/events/brincos.png',
-						flyerMini: '/assets/images/imgDefault.png',
+						flyer: '/images/events/brincos.png',
+						flyerMini: '/images/imgDefault.png',
 						theaterAddress: 'Auditorio Josefa Ortiz de Dominguez',
 						classification: '+18',
 					},
@@ -226,7 +226,7 @@ export default {
 </div>
 				<div class="header-tenant-info-wrapper" >
 					<figure class="profile-img-wrapper">
-						<img :src="mode + infoView.profileImage" alt="">
+						<img :src="infoView.profileImage" alt="">
 					</figure>
 					<span class="profile-name-wrapper">
 						<h4>{{ infoView.name }}</h4>
@@ -234,16 +234,16 @@ export default {
 				</div>
 				<div class="header-social-wrapper">
 					<figure class="iconMediax2">
-						<img pulse-animation :src="mode + '/assets/icon/social-networks/fb-color.svg'" alt="">
+						<img pulse-animation :src="mode + '/icon/social-networks/fb-color.svg'" alt="">
 					</figure>
 					<figure class="iconMediax2">
-						<img pulse-animation :src="mode + '/assets/icon/social-networks/insta-color.svg'" alt="">
+						<img pulse-animation :src="mode + '/icon/social-networks/insta-color.svg'" alt="">
 					</figure>
 					<figure class="iconMediax2">
-						<img pulse-animation :src="mode + '/assets/icon/social-networks/yt-color.svg'" alt="">
+						<img pulse-animation :src="mode + '/icon/social-networks/yt-color.svg'" alt="">
 					</figure>
 					<figure class="iconMediax2">
-						<img pulse-animation :src="mode + '/assets/icon/social-networks/x-color.svg'" alt="">
+						<img pulse-animation :src="mode + '/icon/social-networks/x-color.svg'" alt="">
 					</figure>
 				</div>
 			</header>

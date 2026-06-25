@@ -122,7 +122,8 @@
 
   <a href="mailto:salinas.emmanuel.9810@gmail.com" class="contact-card">
     <figure class="contact-card__icon">
-      <Email class="contact-card__icon-svg"/>
+      <!-- <Email class="contact-card__icon-svg"/> -->
+       <img src="/icon/email.svg" class="contact-card__icon-svg" alt="">
     </figure>
 
     <div class="contact-card__content">
@@ -133,7 +134,8 @@
 
   <a href="https://wa.me/524426770631" target="_blank" class="contact-card">
     <figure class="contact-card__icon">
-      <WhatsApp class="contact-card__icon-svg"/>
+      <img src="/icon/whatsapp.svg" class="contact-card__icon-svg" alt="">
+      <!-- <WhatsApp /> -->
     </figure>
 
     <div class="contact-card__content">
@@ -144,7 +146,8 @@
 
   <a href="https://linkedin.com/in/tu-perfil" target="_blank" class="contact-card">
     <figure class="contact-card__icon">
-      <LinkedIn class="contact-card__icon-svg"/>
+      <!-- <LinkedIn class="contact-card__icon-svg"/> -->
+      <img src="/icon/linkedin.svg" class="contact-card__icon-svg" alt="">
     </figure>
 
     <div class="contact-card__content">
@@ -176,9 +179,6 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Email from '@/assets/icon/email.svg'
-import WhatsApp from '@/assets/icon/whatsapp.svg'
-import LinkedIn from '@/assets/icon/linkedin.svg'
 
 interface TechItem {
   label: string
@@ -208,9 +208,7 @@ interface FlowStep {
 export default defineComponent(<any>{
   name: "TLandingPage",
   components: { 
-    Email, 
-    WhatsApp, 
-    LinkedIn 
+    
   },
   data() {
     return {

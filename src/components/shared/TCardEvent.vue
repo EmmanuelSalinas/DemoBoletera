@@ -85,7 +85,7 @@ export default {
     <div class="card-event-item" box-shadow-gallo flex-row wrap v-for="(item, index) in listEvents" :key="index">
 
         <figure class="card-event-item__image">
-            <img :src="mode + (item as any).flyer" alt="">
+            <img :src="(item as any).flyer" alt="">
             <div class="image-overlay"></div>
         </figure>
         <span class="card-event-item__gender" :class="asignClassGender(item)">

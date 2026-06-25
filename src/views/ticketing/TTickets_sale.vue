@@ -959,7 +959,7 @@ export default {
                     ).format("dddd, D MMMM");
                     
                     
-                    /* await this.loadSvgContent(data.event.general.enclosure.media.url); */
+                    await this.loadSvgContent((this.eventData as any).general.enclosure.media.url);
 
                     /* SE RECORREN LAS COMISIONES PARA AGREGAR ATRIBUTOS */
                     for (const group in (this.eventData as any).fees) {
@@ -1976,7 +1976,7 @@ export default {
                                 color: 'white',
                                 /* class: 'noHasPadding', */
                                 backgroundColor: '#75B1FA',
-                                icon: mode + '/assets/icon/less.svg',
+                                icon: '/icon/less.svg',
                             }" @click.prevent="zoom(1)" />
                             <TButton class="zoom__mobile" v-bind="{
                                 type: 'clickeable',
@@ -1990,7 +1990,7 @@ export default {
                                 color: 'white',
                                 /* class: 'noHasPadding', */
                                 backgroundColor: '#75B1FA',
-                                icon: mode + '/assets/icon/plus.svg',
+                                icon: '/icon/plus.svg',
                             }" @click.prevent="zoom(2)" />
                         </div>
                     </template>
@@ -2247,23 +2247,23 @@ export default {
                             " flex="row" align-center style="text-decoration: underline; cursor: pointer">
                                 *Desglosar boletaje
                                 <span><img v-if="!editInfo.isShowTicketingDetail"
-                                        :src="mode + '/assets/icon/selector_arrow_down.svg'" class="iconMedia" alt="" />
+                                        :src="'/icon/selector_arrow_down.svg'" class="iconMedia" alt="" />
                                     <img v-if="editInfo.isShowTicketingDetail"
-                                        :src="mode + '/assets/icon/selector_arrow_up.svg'" class="iconMedia"
+                                        :src="'/icon/selector_arrow_up.svg'" class="iconMedia"
                                         alt="" /></span>
                             </p>
                             <div v-if="editInfo.isShowTicketingDetail" basis="100" padding-inline-4 padding-block-2>
                                 <span flex-row wrap basis="100">
                                     <h5 basis="100" width-100 font-oswald>
                                         BOLETAJE <span> <img style="width: 1rem;"
-                                                :src="mode + '/assets/icon/rightArrow.svg'" alt=""></span> {{
+                                                :src="'/icon/rightArrow.svg'" alt=""></span> {{
                                                     editInfo.totalToPay }}
                                     </h5>
                                 </span>
                                 <span flex-row wrap basis="100">
                                     <h5 basis="100" width-100 font-oswald>
                                         CARGO POR SERVICIO <span> <img style="width: 1rem;"
-                                                :src="mode + '/assets/icon/rightArrow.svg'" alt=""></span>
+                                                :src="'/icon/rightArrow.svg'" alt=""></span>
                                         {{ formatFn(editInfo.inbropiFees) }}
                                         <!-- $$$ -->
                                     </h5>
@@ -2274,7 +2274,7 @@ export default {
                             CUPÓN :
                             <span text-bolder color-blue-dark style="font-size: 1.5rem" font-oswald>
                                 {{ (couponsApplied as any)[0].key_word }} <span> <img style="width: 1rem;"
-                                        :src="mode + '/assets/icon/rightArrow.svg'" alt=""></span> {{
+                                        :src=" '/icon/rightArrow.svg'" alt=""></span> {{
                                             (couponsApplied as any)[0].typeCoupon === "VIP"
                                                 ? "1 Boleto gratis"
                                                 : (couponsApplied as any)[0].valueCash
@@ -2296,9 +2296,9 @@ export default {
                             " flex="row" align-center style="text-decoration: underline; cursor: pointer" font-oswald>
                                 *Desglosar comisiones
                                 <span><img v-if="!editInfo.isShowFeesDetail"
-                                        :src="mode + '/assets/icon/selector_arrow_down.svg'" class="iconMedia" alt="" />
+                                        :src=" '/icon/selector_arrow_down.svg'" class="iconMedia" alt="" />
                                     <img v-if="editInfo.isShowFeesDetail"
-                                        :src="mode + '/assets/icon/selector_arrow_up.svg'" class="iconMedia"
+                                        :src=" '/icon/selector_arrow_up.svg'" class="iconMedia"
                                         alt="" /></span>
                             </p>
                             <div v-if="editInfo.isShowFeesDetail" basis="100" padding-inline-4 padding-block-2>
@@ -2310,7 +2310,7 @@ export default {
                                             feesItem.groupName !== 'OTROS'
                                         " width-100 font-oswald>
                                             {{ feesItem.title }} <span> <img style="width: 1rem;"
-                                                    :src="mode + '/assets/icon/rightArrow.svg'" alt=""></span> {{
+                                                    :src="'/icon/rightArrow.svg'" alt=""></span> {{
                                                         formatFn(feesItem.cash) }}
                                         </h5>
                                     </span>
@@ -2348,9 +2348,9 @@ export default {
                             " flex="row" align-center style="text-decoration: underline; cursor: pointer" font-oswald>
                                 Detalles de tu compra
                                 <span><img v-if="!editInfo.isShowTotalesDetail"
-                                        :src="mode + '/assets/icon/selector_arrow_down.svg'" class="iconMedia" alt="" />
+                                        :src="'/icon/selector_arrow_down.svg'" class="iconMedia" alt="" />
                                     <img v-if="editInfo.isShowTotalesDetail"
-                                        :src="mode + '/assets/icon/selector_arrow_up.svg'" class="iconMedia"
+                                        :src="'/icon/selector_arrow_up.svg'" class="iconMedia"
                                         alt="" /></span>
                             </p>
                         </div>
@@ -2366,7 +2366,7 @@ export default {
                         <section v-if="editInfo.statusPurchase !== 'START'" width-100 class="" flex-row col-gap="1">
                             <TButton grow="1" class="more_seats" v-bind="{
                                 text: 'Asientos',
-                                icon: mode + '/assets/icon/plus.svg',
+                                icon: '/icon/plus.svg',
                                 type: 'clickeable',
                                 displayIconWrappper: 'row-reverse',
                                 color: 'var(--gallos-red)',
@@ -2521,23 +2521,23 @@ export default {
                             " flex="row" align-center style="text-decoration: underline; cursor: pointer" font-oswald>
                                 *Desglosar boletaje
                                 <span><img v-if="!editInfo.isShowTicketingDetail"
-                                        :src="mode + '/assets/icon/selector_arrow_down.svg'" class="iconMedia" alt="" />
+                                        :src="'/icon/selector_arrow_down.svg'" class="iconMedia" alt="" />
                                     <img v-if="editInfo.isShowTicketingDetail"
-                                        :src="mode + '/assets/icon/selector_arrow_up.svg'" class="iconMedia"
+                                        :src="'/icon/selector_arrow_up.svg'" class="iconMedia"
                                         alt="" /></span>
                             </p>
                             <div v-if="editInfo.isShowTicketingDetail" basis="100" padding-inline-4 padding-block-2>
                                 <span flex-row wrap basis="100">
                                     <h5 basis="100" width-100 font-oswald>
                                         BOLETAJE <span> <img style="width: 1rem;"
-                                                :src="mode + '/assets/icon/rightArrow.svg'" alt=""></span> {{
+                                                :src="'/icon/rightArrow.svg'" alt=""></span> {{
                                                     formatFn(editInfo.totalToPay) }}
                                     </h5>
                                 </span>
                                 <span flex-row wrap basis="100">
                                     <h5 basis="100" width-100 font-oswald>
                                         CARGO POR SERVICIO <span> <img style="width: 1rem;"
-                                                :src="mode + '/assets/icon/rightArrow.svg'" alt=""></span>
+                                                :src="'/icon/rightArrow.svg'" alt=""></span>
                                         {{ formatFn(editInfo.inbropiFees) }}
                                         <!-- $$$ -->
                                     </h5>
@@ -2569,9 +2569,9 @@ export default {
                             " flex="row" align-center style="text-decoration: underline; cursor: pointer">
                                 *Desglosar comisiones
                                 <span><img v-if="!editInfo.isShowFeesDetail"
-                                        :src="mode + '/assets/icon/selector_arrow_down.svg'" class="iconMedia" alt="" />
+                                        :src="'/icon/selector_arrow_down.svg'" class="iconMedia" alt="" />
                                     <img v-if="editInfo.isShowFeesDetail"
-                                        :src="mode + '/assets/icon/selector_arrow_up.svg'" class="iconMedia"
+                                        :src="'/icon/selector_arrow_up.svg'" class="iconMedia"
                                         alt="" /></span>
                             </p>
                             <div v-if="editInfo.isShowFeesDetail" basis="100" padding-inline-4 padding-block-2>
@@ -2583,7 +2583,7 @@ export default {
                                             feesItem.groupName !== 'OTROS'
                                         " width-100 font-oswald>
                                             {{ feesItem.title }} <span> <img style="width: 1rem;"
-                                                    :src="mode + '/assets/icon/rightArrow.svg'" alt=""></span> {{
+                                                    :src="'/icon/rightArrow.svg'" alt=""></span> {{
                                                         formatFn(feesItem.cash) }}
                                         </h5>
                                     </span>
@@ -2623,9 +2623,9 @@ export default {
                                 style="font-size: 1.1rem !important; text-decoration: underline; cursor: pointer; font-weight: 600!important; ">
                                 Detalles de tu compra
                                 <span><img v-if="!editInfo.isShowTotalesDetail"
-                                        :src="mode + '/assets/icon/selector_arrow_down.svg'" class="iconMedia" alt="" />
+                                        :src="'/icon/selector_arrow_down.svg'" class="iconMedia" alt="" />
                                     <img v-if="editInfo.isShowTotalesDetail"
-                                        :src="mode + '/assets/icon/selector_arrow_up.svg'" class="iconMedia"
+                                        :src="'/icon/selector_arrow_up.svg'" class="iconMedia"
                                         alt="" /></span>
                             </p>
                         </div>
@@ -2640,7 +2640,7 @@ export default {
                         <section v-if="editInfo.statusPurchase !== 'START'" width-100 class="" flex-row col-gap="1">
                             <TButton grow="1" class="more_seats" v-bind="{
                                 text: 'Asientos',
-                                icon: mode + '/assets/icon/plus.svg',
+                                icon:  '/icon/plus.svg',
                                 displayIconWrappper: 'row-reverse',
                                 type: 'clickeable',
                                 color: 'var(--gallos-red)',
@@ -2795,7 +2795,7 @@ export default {
                                 </h3>
                                 <section basis="100" flex="row" justify-center padding-bottom-2>
                                     <img style="padding-inline: 0.2rem" class="iconMedia"
-                                        :src="mode + '/assets/icon/pinIcon.svg'" alt="" />
+                                        :src="'/icon/pinIcon.svg'" alt="" />
                                     <p style="padding-top: 0.2rem">
                                         {{ (eventData as any).general.enclosure.address }}
                                     </p>
@@ -2888,8 +2888,7 @@ export default {
                                                 (item as any).row }} - {{ (item as any).seat }}</span>
                                             </p>
                                             <figure basis="100" class="iconTicketItem" flex="row" justify-center>
-                                                <img class="iconMediax2" :src="mode + '/assets/icon/streetview.svg'"
-                                                    alt="" />
+                                                
                                             </figure>
                                         </section>
 

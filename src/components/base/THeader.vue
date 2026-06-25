@@ -1,5 +1,4 @@
 <script lang="ts">
-import IconUser from '@/assets/icon/user-circle.svg'
 /* import TAsideLink from '../shared/TAsideLink.vue'; */
 import TButton from '../shared/TButton.vue';
 /* import TButtonCircleMenu from '@/components/shared/TButtonCircleMenu.vue' */
@@ -11,7 +10,7 @@ export default {
 	components: { /* TAsideLink, */ TButton, /* TButtonCircleMenu */ },
 	setup() {
         return {
-            IconUser
+            
         }
     },
 	data: function () {
@@ -93,7 +92,7 @@ export default {
 				},
 			],
 			srcImgProfile: '',
-			imageProducer: '/assets/images/escGray.png',
+			imageProducer: 'images/escGray.png',
 		}
 	},
 	methods: {
@@ -225,7 +224,7 @@ export default {
 		</span>
 		<span class="toggle-button-wrapper" flex-row  justify-end>
 			<button clickable class="toggle-button" @click.prevent="toggletoggelMenu">
-				<img :src="mode + '/assets/icon/toggle-menu.svg'" alt="">
+				<img :src="mode + 'icon/toggle-menu.svg'" alt="">
 			</button>
 		</span>
 	</header>
@@ -233,7 +232,7 @@ export default {
 		<span class="toggle-button-wrapper" flex-row  justify-end>
 			<button clickable class="toggle-button" @click.prevent="toggletoggelMenu"
 				style="margin-inline-end: 0.8rem; margin-block-start: 1.4rem;">
-				<img :src="mode + '/assets/icon/close.svg'" alt="">
+				<img :src="mode + 'icon/close.svg'" alt="">
 			</button>
 		</span>
 		<figure class="aside__image-wrapper-2" basis="20" flex-row justify-center align-center>

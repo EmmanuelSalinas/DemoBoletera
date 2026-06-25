@@ -30,7 +30,7 @@ export default {
         <summary flex="row">
             <!-- <h1>{{ title }}</h1> -->
             <slot name="slot__title" />
-            <span class="arow" flex="row"><img class="imagen__arrow" :src="mode + '/assets/icon/selector_arrow.svg'"
+            <span class="arow" flex="row"><img class="imagen__arrow" :src="mode + 'icon/selector_arrow.svg'"
                     alt="" /></span>
         </summary>
         <div class="content">

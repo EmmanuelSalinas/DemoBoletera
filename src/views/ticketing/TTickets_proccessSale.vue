@@ -2,7 +2,6 @@
 /// @ts-ignore
 import { scrollToRef, formatMoney,unformatMoney } from "@/utils/generals";
 import TButton from "@/components/shared/TButton.vue";
-import mapaSvg from '@/assets/images/enclosure/auditorioJosefa.svg?raw';
 import Swal from 'sweetalert2'
 import seatsDataDoc from "@/utils/data/seatsDataDoc";
 //@ts-ignore
@@ -37,18 +36,14 @@ export default {
                 } */
 
                     
-                const response = await fetch( '/src' + this.eventData.general.media.enclosurePath, {
-                    mode: 'cors',
-                    credentials: 'omit',  // ← Agrega esto
-                    cache: 'no-cache' 
-                })
-                    .then((response) => response.text())
-                    .then((data) => {
-                        this.eventData.general.media.enclosureSVGContent = data;
-                    })
-                    .catch((error) => {
-                        console.error("Error loading SVG:", error);
-                    });
+                const response = await fetch('/images/enclosure/auditorioJosefa.svg')
+        
+        if (response.ok) {
+          // Guardamos el texto del SVG en nuestra variable de data usando 'this'
+          this.eventData.general.media.enclosureSVGContent = await response.text()
+        } else {
+          console.error('Error al cargar el SVG:', response.statusText)
+        }
             } catch (error) {
                 console.error("Error cargando el SVG:", error);
             }
@@ -664,9 +659,9 @@ export default {
                 general: {
                     name: 'Dia de muertos',
                     media: {
-                        flayerUrl: '/assets/images/events/lasCatrinas.jpg',
-                        enclosurePath: '/assets/iages/enclosure/auditorioJosefa.svg',
-                        enclosureSVGContent: mapaSvg,
+                        flayerUrl: '/images/events/lasCatrinas.jpg',
+                        enclosurePath: '/iages/enclosure/auditorioJosefa.svg',
+                        enclosureSVGContent: ''
                     }
                 },
                 prices: [
@@ -723,7 +718,7 @@ export default {
             },        }
     },
     async created() {
-        
+        await this.loadSvgFile()
     },
     computed: {
         mode() {
@@ -835,7 +830,7 @@ export default {
                                 color: 'white',
                                 /* class: 'noHasPadding', */
                                 backgroundColor: 'var(--color-accent-dark)',
-                                icon: mode + '/assets/icon/zoom/less.svg',
+                                icon:  '/icon/zoom/less.svg',
                             }" @click.prevent="zoom(1)" />
                             <TButton class="zoom__mobile" v-bind="{
                                 type: 'clickeable',
@@ -849,7 +844,7 @@ export default {
                                 color: 'white',
                                 /* class: 'noHasPadding', */
                                 backgroundColor: 'var(--color-accent-dark)',
-                                icon: mode + '/assets/icon/zoom/plus.svg',
+                                icon:  '/icon/zoom/plus.svg',
                             }" @click.prevent="zoom(2)" />
                         </div>
                     </template>
@@ -904,7 +899,7 @@ export default {
                                 @click="showSeats(ticketItem)">
                                 <div flex="row" basis="100" align-center>
                                     <figure basis="15" class="iconTicketItem" flex="row" justify-center>
-                                        <img class="iconMedia" :src="mode + '/assets/icon/ticketIcon.svg'" alt="" />
+                                        <img class="iconMedia" :src=" '/icon/ticketIcon.svg'" alt="" />
                                     </figure>
                                     <h4 basis="70" class="nameZoneTicket" padding-inline-1>
                                         {{ ticketItem.nameSection }}
@@ -936,7 +931,7 @@ export default {
                 <div flex-row wrap basis-100 align-start justify-center
                     style="height: calc(100vh - 15rem)" >
                     <figure basis="70" class="ticketPurchase__flyerContainer" box-shadow-gallo>
-                        <img :src="mode + (eventData as any).general?.media?.flayerUrl" alt="" />
+                        <img :src=" (eventData as any).general?.media?.flayerUrl" alt="" />
                     </figure>
                     <div flex="row" class="ticketPurchase__infoContainer" width-100 padding-inline-2>
                         <h3 style="flex-grow: 1; font-family: 'SN Pro' !important; font-size: 2rem !important; font-weight: 600; color: var(--color-neutral-900)" text-center>
@@ -1007,23 +1002,23 @@ export default {
                             " flex-row align-center style="text-decoration: underline; cursor: pointer" font-oswald>
                                 *Desglosar boletaje
                                 <span><img v-if="!editInfo.isShowTicketingDetail"
-                                        :src="mode + '/assets/icon/selector_arrow_down.svg'" class="iconMedia" alt="" />
+                                        :src=" '/icon/selector_arrow_down.svg'" class="iconMedia" alt="" />
                                     <img v-if="editInfo.isShowTicketingDetail"
-                                        :src="mode + '/assets/icon/selector_arrow_up.svg'" class="iconMedia"
+                                        :src=" '/icon/selector_arrow_up.svg'" class="iconMedia"
                                         alt="" /></span>
                             </p>
                             <div v-if="editInfo.isShowTicketingDetail" basis="100" padding-inline-4 padding-block-2>
                                 <span flex-row wrap basis="100">
                                     <h5 basis="100" width-100 font-oswald>
                                         BOLETAJE <span> <img style="width: 1rem;"
-                                                :src="mode + '/assets/icon/rightArrow.svg'" alt=""></span> {{
+                                                :src=" '/icon/rightArrow.svg'" alt=""></span> {{
                                                     formatMoney(editInfo.totalToPay) }}
                                     </h5>
                                 </span>
                                 <span flex-row wrap basis="100">
                                     <h5 basis="100" width-100 font-oswald>
                                         CARGO POR SERVICIO <span> <img style="width: 1rem;"
-                                                :src="mode + '/assets/icon/rightArrow.svg'" alt=""></span>
+                                                :src=" '/icon/rightArrow.svg'" alt=""></span>
                                         {{ formatMoney(editInfo.inbropiFees) }}
                                        
                                     </h5>
@@ -1045,9 +1040,9 @@ export default {
                             " flex-row align-center style="text-decoration: underline; cursor: pointer">
                                 *Desglosar comisiones
                                 <span><img v-if="!editInfo.isShowFeesDetail"
-                                        :src="mode + '/assets/icon/selector_arrow_down.svg'" class="iconMedia" alt="" />
+                                        :src=" '/icon/selector_arrow_down.svg'" class="iconMedia" alt="" />
                                     <img v-if="editInfo.isShowFeesDetail"
-                                        :src="mode + '/assets/icon/selector_arrow_up.svg'" class="iconMedia"
+                                        :src=" '/icon/selector_arrow_up.svg'" class="iconMedia"
                                         alt="" /></span>
                             </p>
                             <div v-if="editInfo.isShowFeesDetail" basis="100" padding-inline-4 padding-block-2>
@@ -1059,7 +1054,7 @@ export default {
                                             feesItem.groupName !== 'OTROS'
                                         " width-100 font-oswald>
                                             {{ feesItem.title }} <span> <img style="width: 1rem;"
-                                                    :src="mode + '/assets/icon/rightArrow.svg'" alt=""></span> {{
+                                                    :src=" '/icon/rightArrow.svg'" alt=""></span> {{
                                                         formatMoney(feesItem.cash) }}
                                         </h5>
                                     </span>
@@ -1100,9 +1095,9 @@ export default {
                                 Detalles de tu compra
                                 <span>
                                     <img v-if="!editInfo.isShowTotalesDetail"
-                                        :src="mode + '/assets/icon/selector_arrow_down.svg'" class="iconMedia" alt="" />
+                                        :src=" '/icon/selector_arrow_down.svg'" class="iconMedia" alt="" />
                                     <img v-if="editInfo.isShowTotalesDetail"
-                                        :src="mode + '/assets/icon/selector_arrow_up.svg'" class="iconMedia"
+                                        :src=" '/icon/selector_arrow_up.svg'" class="iconMedia"
                                         alt="" />
                                 </span>
                             </p>
@@ -1119,7 +1114,7 @@ export default {
                         <section v-if="editInfo.statusPurchase !== 'START'" width-100 class="" flex-row col-gap="1">
                             <TButton grow="1" class="more_seats" v-bind="{
                                 text: 'Asientos',
-                                icon: mode + '/assets/icon/plus.svg',
+                                icon:  '/icon/plus.svg',
                                 displayIconWrappper: 'row-reverse',
                                 type: 'clickeable',
                                 color: 'var(--gallos-red)',
